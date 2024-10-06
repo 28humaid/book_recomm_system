@@ -22,5 +22,26 @@
             </div>
         </div>
     </nav>
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-12">
+                <h1>Top 50 books</h1>
+            </div>
+            {% for i in range(book_name|length) %}
+                <div class="col-md-3" style="margin-top:2%">
+                    <div class="card">
+                        <div class="card-body">
+                            <img src="{{image[i]}}" alt="">
+                            <h5>{{book_name[i]}}</h5>
+                            <h6>{{author[i]}}</h6>
+                            <p>Votes-{{votes[i]}}</p>
+                            <p>Rating-{{rating[i]}}</p>
+                        </div>
+                    </div>
+                </div>
+            {%endfor%}
+        </div>
+    </div>
 </body>
 </html>
