@@ -14,5 +14,9 @@ def index():
                            votes=list(famous_books['RatingCount'].values),
                            rating=list(famous_books['RatingMean'].values))
 
+@app.route('/similarity')
+def similarity():
+    return render_template('similarity.html')
+
 if __name__=='__main__':
     app.run(debug=True)
