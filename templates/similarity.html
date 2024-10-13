@@ -32,18 +32,17 @@
                     <input type="submit" class="btn btn-lg btn-warning">
                 </form>
             </div>
-            {% if data %}
-                {% for book in range(data|length) %}
-                <div class="col-md-3" style="margin-top:2%">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="{{book[6]}}" alt="image not found">
-                            <h5>{{book[3]}}</h5>
-                            
+            {% if book_name %}
+                {% for i in range(book_name|length) %}
+                    <div class="col-md-3" style="margin-top:2%">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="{{image[i]}}" alt="">
+                                <h5>{{book_name[i]}}</h5>
+                            </div>
                         </div>
                     </div>
-                </div>
-            {% endfor %}
+                {%endfor%}
             {% endif %}
         </div>
     </div>

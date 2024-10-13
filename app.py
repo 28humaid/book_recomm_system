@@ -25,8 +25,10 @@ def similar_authors():
     author_name=request.form.get('authorName')
     desiredBooks = books[books['Book-Author']==author_name]
     # return desiredBooks.to_dict(orient="records")
-    return render_template("similarity.html",data=desiredBooks.to_dict(orient="records"))
-    
+    data=desiredBooks.to_dict(orient="records")
+    return render_template("similarity.html",
+                        book_name=list(desiredBooks['Book-Title'].values),
+                        image=list(desiredBooks['Image-URL-M'].values))
 
 
 if __name__=='__main__':
