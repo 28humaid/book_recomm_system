@@ -57,7 +57,7 @@ def colabFilteredBooks():
 
         data.append(item)
 
-    print(data)
+    # print(data)
 
     return render_template('colabFilter.html',data=data)
 
