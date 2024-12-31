@@ -16,7 +16,8 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link" href="/">Home</a>
-                    <a class="nav-link active" aria-current="page" href="/similarity">Recommend</a>
+                    <a class="nav-link active" aria-current="page" href="/authorSimilarity">Recommend</a>
+                    <a class="nav-link" aria-current="page" href="/colabFilteringSimilarity">Colab Filtering Recommender</a>
                     <a class="nav-link" href="#">Contact</a>
                 </div>
             </div>
@@ -26,7 +27,7 @@
         <div class="row">
             
             <div class="col-md-12">
-                <h1 style="color:white">Similar books</h1>
+                <h1 style="color:white">Books by an author</h1>
                 <form action="/similarAuthors" method="post">
                     <input name="authorName" type="text" class="form-control"><br>
                     <input type="submit" class="btn btn-lg btn-warning">
